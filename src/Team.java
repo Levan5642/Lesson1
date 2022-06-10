@@ -1,2 +1,37 @@
-package PACKAGE_NAME;public class Team {
-}
+
+    public class Team {
+
+        private static String teamName;
+        private String memberName;
+
+        private int jumpHeight;
+
+
+        public Team(String memberName, int jumpHeight) {
+            teamName = "Пацаны ваще ребята";
+            this.memberName = memberName;
+            this.jumpHeight = jumpHeight;
+
+        }
+
+
+        @Override
+
+        public String toString() {
+
+            return this.memberName + " " + this.jumpHeight;
+        }
+
+
+        public static String getTeamName() {
+
+            return teamName;
+
+        }
+
+
+        public void run(ObstacleCourse obstacles) {
+            obstacles.jumpingThrough(jumpHeight);
+        }
+    }
+
